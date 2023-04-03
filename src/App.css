@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.profileBox{
+  width: 500px;
+  height: auto;
+  padding: 2rem;
+  margin: 1rem;
+  background-color: black;
+  color: white;
+}
+.info{
+  font-weight: 700;
+  
+}
+
+.tps{
+  background-color: aquamarine;
+}

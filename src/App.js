@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+//import ClassComponent from './ClassComponent';
+import { useState } from 'react';
+import Timer from './Timer';
 
 function App() {
+  const [visible, setVisible] = useState(false);
+
+  const handleToggle = () => {
+    setVisible((current) => !current);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+      {/*<ClassComponent />*/}
+      <Timer />
+      <button onClick={handleToggle}>AFFICHER/MASQUER</button>
+      {visible && 
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <div className='profileBox'>          
+          <div ><span className='info'>fullName :</span> <span>KOFFI PATRICE</span></div>
+          <div ><span className='info'>bio :</span> <span>ETUDIANT GOMYCODE</span></div>
+          <div ><span className='info'>profession :</span> <span>INFORMATIQUE</span></div>
+          <div className='info'><img src='PhotoPatrice.jpg' alt=''></img></div>          
+        </div>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        }
+
+
     </div>
   );
 }
